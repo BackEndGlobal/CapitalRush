@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f14;
+  color: #f5f7fa;
+}
+
+header {
+  height: 70px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #202833;
+  background: #10151c;
+}
+
+header h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+#day {
+  color: #9aa4b2;
+}
+
+main {
+  max-width: 1400px;
+  margin: auto;
+  padding: 25px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card,
+.panel {
+  background: #111820;
+  border: 1px solid #202a35;
+  border-radius: 10px;
+}
+
+.card {
+  padding: 20px;
+}
+
+.card span {
+  color: #8995a3;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card strong {
+  font-size: 25px;
+}
+
+.market {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+}
+
+.panel {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.stock {
+  padding: 15px;
+  border-bottom: 1px solid #202a35;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock:hover {
+  background: #18212b;
+}
+
+.stock-name {
+  font-weight: bold;
+}
+
+.stock-price {
+  color: #b8c1cc;
+}
+
+#price {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px 0 5px;
+}
+
+#change {
+  margin-bottom: 20px;
+}
+
+.chart {
+  height: 250px;
+  background: #0b1016;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.trade-controls {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100px;
+  background: #0b1016;
+  border: 1px solid #303b48;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#buy {
+  background: #20c77a;
+  color: white;
+}
+
+#sell {
+  background: #e65353;
+  color: white;
+}
+
+#next-day {
+  width: 100%;
+  margin-top: 20px;
+  background: #2463eb;
+  color: white;
+  font-size: 15px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#message {
+  min-height: 20px;
+  color: #9aa4b2;
+}
+
+@media (max-width: 800px) {
+  .stats,
+  .market,
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+}
