@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capital Rush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>CAPITAL RUSH</h1>
+      <div id="day">Day 1 / 30</div>
+    </header>
+
+    <main>
+      <section class="stats">
+        <div class="card">
+          <span>Cash</span>
+          <strong id="cash">$10,000</strong>
+        </div>
+
+        <div class="card">
+          <span>Portfolio</span>
+          <strong id="portfolio">$0</strong>
+        </div>
+
+        <div class="card">
+          <span>Total Wealth</span>
+          <strong id="wealth">$10,000</strong>
+        </div>
+      </section>
+
+      <section class="market">
+        <div class="panel stocks">
+          <h2>Market</h2>
+          <div id="stock-list"></div>
+        </div>
+
+        <div class="panel trading">
+          <h2 id="selected-stock">Select a stock</h2>
+
+          <div id="price">$0.00</div>
+          <div id="change">0.00%</div>
+
+          <div class="chart">
+            <canvas id="chart"></canvas>
+          </div>
+
+          <div class="trade-controls">
+            <input
+              id="quantity"
+              type="number"
+              min="1"
+              value="1"
+            />
+
+            <button id="buy">BUY</button>
+            <button id="sell">SELL</button>
+          </div>
+
+          <p id="message"></p>
+        </div>
+      </section>
+
+      <section class="bottom">
+        <div class="panel">
+          <h2>Your Holdings</h2>
+          <div id="holdings"></div>
+        </div>
+
+        <div class="panel">
+          <h2>Market News</h2>
+          <div id="news">
+            Welcome to Capital Rush. The market is open.
+          </div>
+        </div>
+      </section>
+
+      <button id="next-day">ADVANCE DAY</button>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
